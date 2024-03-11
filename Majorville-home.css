@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --oragne: #ff8c3f;
+    --light: #fff
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8)
+}
+
+body {
+    margin: 1%;
+    background-image: url(sunflower.jpg) ;
+    background-size: cover;
+    
+}
+
+img {max-width: 100%; height: auto;}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 0.5rem;
+
+   grid-template-areas: 
+   "header"
+   "nav"
+   "left"
+   "right"
+   "main";
+}
+
+.left {
+    grid-area: left;
+    background-color: lightblue;
+    padding: 0.5rem;
+    border: 2px solid #000;
+}
+
+.right {
+    grid-area: right;
+    background-color: lightcoral;
+    padding: 0.5rem;
+    border: 2px solid #000;
+
+}
+
+header {
+    grid-area: header;
+
+    background-color: rgb(159, 219, 130) ;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 0.5rem;
+    border: 2px solid #000;
+}
+
+.main-nav {
+    grid-area: nav;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid #000;
+}
+
+.main-nav-ul {
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav-a {
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.main-nav-a:hover{
+    background: var(--dark);
+    color: var();
+}
+
+main {
+    grid-area: main;
+    background-color: lavender;
+    padding: 0.5rem;
+    border: 2px solid #000;
+}
+footer {
+    grid-area: footer;
+    background-color: lightpink;
+    padding: 0.5rem;
+    border: 2px solid #000;
+}
+@media (width > 995px) {
+
+
+    .container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.8rem;
+        grid-template-areas:
+        
+        "header header header header header"
+        "nav nav nav nav nav"
+        "left main main main right"
+        "left main main main right"
+        "footer footer footer footer footer";
+    }
+
+
+.main-nav-ul {
+    display: grid;
+    gap: 5px;
+    padding: 0.5rem;
+    list-style-type: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav-a {
+    padding: 1rem;
+}
+
+.main-nav-a:hover{
+    background: var(--oragne);
+    color: var(--dark);
+}
+
+}
