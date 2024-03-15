@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --oragne: #ff8c3f;
+    --light: #fff
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8)
+}
+
+body {
+    margin: 40px;
+    background-color: darkred ;
+    background-size: cover;
+    
+}
+
+img {max-width: 100%; height: auto;}
+
+.unordered-margin {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.ordered-margin {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.img43 {
+   image-rendering: auto;
+}
+
+.container {
+    /* Mobile view */
+   display: grid;
+   grid-template-columns: 1fr;
+
+   gap: 0.5rem;
+
+   grid-template-areas: 
+   "header"
+   "nav"
+   "left"
+   "right"
+   "main"
+   "footer";
+}
+
+.left {
+    grid-area: left;
+    background-color: ;
+    color: white;
+    padding: 0.5rem;
+    border: 2px solid tan;
+    
+    /* height: 100px; */
+}
+
+.right {
+    grid-area: right;
+    background-color: ;
+    color: white;
+    padding: 0.5rem;
+    border: 2px solid tan;
+    
+
+}
+
+header {
+    display: grid;
+    justify-items: center;
+    grid-area: header;
+    /* background-color: rgb(214, 191, 163); */
+    background-image: url(outdoor.jpg);
+    /* height: 200px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 1rem;
+    color: white;
+    border: 2px solid tan;
+}
+
+header h2 {
+    text-align: center;
+}
+
+.main-nav {
+    grid-area: nav;
+    background-color: ;
+    
+    border: 2px solid tan;
+  
+}
+
+.main-nav ul {
+    /* Mobile */
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    background: ;
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.main-nav a:hover{
+    background: tan;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    grid-area: main;
+    background-color: ;
+    color: white;
+    padding: 0.5rem;
+    border: 2px solid tan;
+}
+footer {
+    grid-area: footer;
+    background-color: ;
+    color: white;
+    padding: 1rem;
+    border: 2px solid  tan;
+    /* height: 50px; */
+}
+@media (width > 995px) {
+
+
+    .container {
+        /* Desktop view */
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: max-content auto 1fr 100px;
+        gap: 0.5rem;
+        min-height: 100vh;
+        grid-template-areas:
+        
+        "header header header header header"
+        "nav nav nav nav nav"
+        "right right left left left ";
+
+    }
+
+
+    .main-nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        padding: 0.5rem;
+        list-style-type: none;
+        
+    }
+
+    .main-nav a {
+        padding: 1rem;
+    }
+
+    .main-nav a:hover{
+        background: lightgoldenrodyellow;
+        color: black;
+    }
+
+}
