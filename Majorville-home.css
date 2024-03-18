@@ -9,7 +9,7 @@
     --dark: #333;
     --oragne: #ff8c3f;
     --light: #fff
-    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8)
+   
 }
 
 body {
@@ -114,7 +114,7 @@ header h2 {
     text-decoration: none;
     padding: 0.8rem;
     text-align: center;
-    color: var(--dark);
+    
     text-transform: uppercase;
     font-size: 1.1rem;
 }
